@@ -8,6 +8,7 @@ from tree_search import find_min_max
 from tree_export import export_tree
 from tree_remove import remove_elements
 from tree_delete_all import delete_all
+from tree_rebalance import dsw_rebalance
 
 
 def print_help():
@@ -55,7 +56,7 @@ def main():
             elif action == "export":
                 export_tree(root)
             elif action == "rebalance":
-                pass 
+                root = dsw_rebalance(root)
             elif action in ["exit", ""]:
                 break
             else:
