@@ -3,6 +3,7 @@ import argparse
 import sys
 
 from trees import build_bst, build_avl
+from tree_print import print_tree
 
 def print_help():
     print("Help \tShow this message")
@@ -36,7 +37,7 @@ def main():
             if action == "help":
                 print_help()
             elif action == "print":
-                pass 
+                print_tree(root)
             elif action == "remove":
                 pass 
             elif action == "delete":
