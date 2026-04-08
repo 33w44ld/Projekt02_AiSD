@@ -4,10 +4,12 @@ import sys
 
 from trees import build_bst, build_avl
 from tree_print import print_tree
+from tree_search import find_min_max
 
 def print_help():
     print("Help \tShow this message")
     print("Print \tPrint the tree (in-order, pre-order, post-order)")
+    print("Search \tFind min and max values in the tree")
     print("Remove \tRemove elements of the tree")
     print("Delete \tDelete whole tree")
     print("Export \tExport the tree to tikzpicture")
@@ -38,6 +40,8 @@ def main():
                 print_help()
             elif action == "print":
                 print_tree(root)
+            elif action == "search":
+                find_min_max(root)
             elif action == "remove":
                 pass 
             elif action == "delete":
