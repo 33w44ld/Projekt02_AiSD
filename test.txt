@@ -1,6 +1,6 @@
 5 9 12 2 6 10 13
-Print
-Search
-Export
-Help
+print
+remove
+2 6
+print
 Exit

@@ -6,6 +6,8 @@ from trees import build_bst, build_avl
 from tree_print import print_tree
 from tree_search import find_min_max
 from tree_export import export_tree
+from tree_remove import remove_elements
+
 
 def print_help():
     print("Help \tShow this message")
@@ -44,7 +46,9 @@ def main():
             elif action == "search":
                 find_min_max(root)
             elif action == "remove":
-                pass 
+                remove_input = input("remove> ")
+                values_to_remove = [int(x) for x in remove_input.split()]
+                root = remove_elements(root, values_to_remove)
             elif action == "delete":
                 pass 
             elif action == "export":
