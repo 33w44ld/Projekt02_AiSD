@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+import argparse
+import sys
+
+from trees import build_bst, build_avl
+
+def print_help():
+    print("Help \tShow this message")
+    print("Print \tPrint the tree (in-order, pre-order, post-order)")
+    print("Remove \tRemove elements of the tree")
+    print("Delete \tDelete whole tree")
+    print("Export \tExport the tree to tikzpicture")
+    print("Rebalance \tRebalance the tree")
+    print("Exit \tExits the program (same as Ctrl+D)")
+
+def main():
+    parser = argparse.ArgumentParser(description="Drzewa przeszukiwań binarnych")
+    parser.add_argument("--tree", choices=["BST", "AVL"], required=True, help="Wybierz typ drzewa")
+    args = parser.parse_args()
+
+    try:
+        # -------- Pytanie o węzły i parsowanie wpisanych liczb na liste intow ------- #
+        nodes_input = input("nodes> ")
+        values = [int(x) for x in nodes_input.split()]
+
+        # -------------- Budowanie drzewa za pomocja funkcji z trees.py -------------- #
+        if args.tree == "BST":
+            root = build_bst(values)
+        else:
+            root = build_avl(values)
+
+        while True:
+            action_input = input("action> ").strip()
+            action = action_input.lower()
+
+            if action == "help":
+                print_help()
+            elif action == "print":
+                pass 
+            elif action == "remove":
+                pass 
+            elif action == "delete":
+                pass 
+            elif action == "export":
+                pass 
+            elif action == "rebalance":
+                pass 
+            elif action in ["exit", ""]:
+                break
+            else:
+                pass
+
+    except EOFError:
+        pass
+    except KeyboardInterrupt:
+        print()
+    
+    print("Program exited with status: 0")
+
+if __name__ == "__main__":
+    main()
