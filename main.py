@@ -1,14 +1,13 @@
-"""
-To run this file issue this command:
-python3 HelloWorld.py
+import argparse
+import sys
 
-Python as a interpreted language executes code directly without a separate compilation step, 
-translating and running the source code on-the-fly during execution.
-"""
+from trees import build_bst, build_avl
 
-from HelloWorld import HelloWorld
-
-# Checks if the Python script is being run as the main program (not imported as a module)
-if __name__ == "__main__":
-    print(HelloWorld())
-    
+def print_help():
+    print("Help \tShow this message")
+    print("Print \tPrint the tree (in-order, pre-order, post-order)")
+    print("Remove \tRemove elements of the tree")
+    print("Delete \tDelete whole tree")
+    print("Export \tExport the tree to tikzpicture")
+    print("Rebalance \tRebalance the tree")
+    print("Exit \tExits the program (same as Ctrl+D)")
