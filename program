@@ -5,6 +5,7 @@ import sys
 from trees import build_bst, build_avl
 from tree_print import print_tree
 from tree_search import find_min_max
+from tree_export import export_tree
 
 def print_help():
     print("Help \tShow this message")
@@ -47,7 +48,7 @@ def main():
             elif action == "delete":
                 pass 
             elif action == "export":
-                pass 
+                export_tree(root)
             elif action == "rebalance":
                 pass 
             elif action in ["exit", ""]:
