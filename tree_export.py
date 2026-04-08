@@ -1,3 +1,4 @@
+# ---------------- Export do TickZPicture (kod z prezentacji) ---------------- #
 def generate_tikz(node):
     if node is None:
         return ""
@@ -12,7 +13,7 @@ def generate_tikz(node):
 
 def export_tree(root):
     if root is None:
-        print("Drzewo jest puste, brak danych do eksportu")
+        print("Tree is empty")
         return
     
     tikz_code = generate_tikz(root)

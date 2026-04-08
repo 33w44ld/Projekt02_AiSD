@@ -15,6 +15,8 @@ def find_max(node):
         current = current.right
     return current
 
+# ---------------------------- Wypisywanie Min/Max --------------------------- #
+
 def find_min_max(root):
     min_node = find_min(root)
     max_node = find_max(root)
@@ -23,4 +25,4 @@ def find_min_max(root):
         print(f"Min: {min_node.value}")
         print(f"Max: {max_node.value}")
     else:
-        print("Drzewo jest puste")
+        print("Tree is empty")
